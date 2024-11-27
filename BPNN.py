@@ -16,7 +16,6 @@ class MNN:
         self.biases = []
         prev_layer_size = input_size
         
-        '''
         # Initialize weights using Xavier initialization
         for layer_size in neurons:
             self.weights.append(np.random.randn(prev_layer_size, layer_size) * np.sqrt(2. / prev_layer_size))
@@ -25,6 +24,7 @@ class MNN:
 
         self.weights.append(np.random.randn(prev_layer_size, output_size) * np.sqrt(2. / prev_layer_size))
         self.biases.append(np.zeros((1, output_size)))
+        
         '''
         #Random_init
         for layer_size in neurons:
@@ -34,6 +34,8 @@ class MNN:
 
         self.weights.append(np.random.randn(prev_layer_size, output_size) * 0.1)
         self.biases.append(np.zeros((1, output_size)))
+        '''
+        
 
     def activation(self, x):
         if self.activation_function == 'sigmoid':
